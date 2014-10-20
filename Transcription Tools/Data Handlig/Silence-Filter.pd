@@ -1,0 +1,28 @@
+#N canvas 141 86 450 300 10;
+#X obj 133 144 list split 1;
+#X obj 133 173 sel note;
+#X obj 133 228 list;
+#X obj 133 200 symbol note;
+#X obj 133 81 inlet;
+#X obj 100 266 outlet;
+#X obj 100 111 gate 2;
+#X obj 1 3 cnv 15 103 34 empty empty Silence-Filter 14 6 2 12 -233017
+-66577 0;
+#X obj 2 20 tgl 15 0 empty empty Bypass/Filter 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 100 89 + 1;
+#X obj 100 44 loadbang;
+#X msg 100 66 0;
+#X connect 0 0 1 0;
+#X connect 0 1 2 1;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 6 1;
+#X connect 6 0 5 0;
+#X connect 6 1 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
+#X connect 10 0 11 0;
+#X connect 11 0 9 0;
+#X coords 0 -1 1 1 105 40 1 0 0;
